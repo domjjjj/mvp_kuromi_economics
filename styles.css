@@ -1,0 +1,195 @@
+:root {
+    --rosa-fuerte: #FF69B4;
+    --morado: #8E44AD;
+    --rosa-pastel: #FFB6C1;
+    --lavanda: #D8B4FE;
+    --fondo: #FFF0F5;
+    --texto-oscuro: #3A1F4A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Quicksand', system-ui, sans-serif;
+    background: var(--fondo);
+    color: var(--texto-oscuro);
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--morado);
+}
+
+nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--rosa-fuerte);
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, var(--rosa-pastel) 0%, var(--lavanda) 100%);
+    border-radius: 0 0 30px 30px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.accent {
+    background: var(--morado);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+button {
+    background: var(--morado);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background: var(--rosa-fuerte);
+    transform: scale(1.02);
+}
+
+.explicacion, .beneficios, .form-section {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.explicacion h2, .beneficios h2, .form-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--morado);
+}
+
+.ejemplo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.cuadro {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 8px solid var(--rosa-fuerte);
+}
+
+.nota {
+    text-align: center;
+    background: var(--lavanda);
+    padding: 0.8rem;
+    border-radius: 30px;
+    margin-top: 1rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 240px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--morado);
+    margin-bottom: 0.5rem;
+}
+
+.form-section {
+    background: white;
+    border-radius: 30px;
+    margin: 1rem auto;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.form-section input {
+    padding: 0.7rem;
+    margin: 0.5rem;
+    border-radius: 30px;
+    border: 1px solid var(--rosa-pastel);
+    width: 240px;
+    font-size: 1rem;
+}
+
+footer {
+    background: var(--morado);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+#formMessage {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--rosa-fuerte);
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+}
